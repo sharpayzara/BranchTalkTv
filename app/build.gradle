@@ -1,0 +1,83 @@
+
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+
+    defaultConfig {
+        applicationId "com.sumavision.branch"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        all32 { minSdkVersion 15}
+        all64 { minSdkVersion 21 }
+        // armv5 {}
+        // armv7a {}
+        // arm64 { minSdkVersion 21 }
+        // x86 {}
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.6.0'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.6.0'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.6.0'
+    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.6.0'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.6.0'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.6.0'
+    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.6.0'
+
+
+    compile rootProject.ext.supportLibAppCompat
+    compile rootProject.ext.supportLib
+    compile rootProject.ext.supportLibDesign
+    compile rootProject.ext.supportLibRecyclerview
+    compile rootProject.ext.supportLibCardview
+    compile rootProject.ext.libRetrofit
+    compile rootProject.ext.libRetrofitConverterGson
+    compile rootProject.ext.libRetrofitAdapterRxJava
+    debugCompile rootProject.ext.libDebugLeakBird
+    releaseCompile rootProject.ext.libReleaseLeakBird
+    testCompile rootProject.ext.libTestLeakBird
+    compile rootProject.ext.libOkHttp
+    compile rootProject.ext.libGlide
+    compile rootProject.ext.libStetho
+    compile rootProject.ext.libStethoOkhttp
+    compile rootProject.ext.libJlog
+    compile rootProject.ext.libButterknife
+    apt rootProject.ext.libButterknifeCompiler
+    compile rootProject.ext.libGson
+    compile rootProject.ext.libRxAndroid
+    compile rootProject.ext.libRxLifecycle
+    compile rootProject.ext.libRxLifecycleComponents
+    compile rootProject.ext.libPhotoView
+    compile rootProject.ext.libMultidex
+    compile rootProject.ext.libJackson
+    compile rootProject.ext.libOrmliteCore
+    compile rootProject.ext.libOrmliteAndroid
+    compile rootProject.ext.libNumberProgressBar
+    compile rootProject.ext.libRxBus
+    compile rootProject.ext.libPagerslidingtabstripVersion
+    compile rootProject.ext.libGridlaout
+    compile rootProject.ext.libEventBus
+    compile rootProject.ext.libAsync
+    compile rootProject.ext.libUmeng
+    compile project(':offlinecachelibrary')
+}

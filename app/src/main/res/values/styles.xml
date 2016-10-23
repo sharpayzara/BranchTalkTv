@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- toolbar（actionbar）颜色 -->
+        <item name="colorPrimary">@color/white</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">@color/blue</item>
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+    <style name="selections_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/selections_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/selections_exit_anim</item>
+    </style>
+
+    <style name="UpdateDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+  <!--  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        &lt;!&ndash; toolbar（actionbar）颜色 &ndash;&gt;
+        <item name="colorPrimary">@color/white</item>
+        &lt;!&ndash; 状态栏颜色 &ndash;&gt;
+        <item name="colorPrimaryDark">@color/blue</item>
+        &lt;!&ndash; 窗口的背景颜色 &ndash;&gt;
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>-->
+</resources>
